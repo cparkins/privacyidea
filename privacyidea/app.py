@@ -211,6 +211,7 @@ def create_app(config_name="development",
     if os.path.isfile(log_config_file):
         for cnf_type in ['cfg', 'yaml']:
             try:
+                print(f"Trying to read logging configuration from {log_config_file} using {cnf_type}")
                 log_read_func[cnf_type](log_config_file)
                 if not silent:
                     print('Read Logging settings from {0!s}'.format(log_config_file))
