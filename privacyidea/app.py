@@ -236,6 +236,7 @@ def create_app(config_name="development",
         logging.config.dictConfig(DEFAULT_LOGGING_CONFIG)
 
     log = logging.getLogger(__name__)
+    log.propagate = False
 
     queue.register_app(app)
 
