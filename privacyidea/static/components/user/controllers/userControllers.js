@@ -392,7 +392,7 @@ angular.module("privacyideaApp")
     .controller("userController", ['$scope', '$location', 'userUrl', 'realmUrl',
         '$rootScope', 'ConfigFactory', 'UserFactory', 'gettextCatalog', 'AuthFactory',
         function ($scope, $location, userUrl, realmUrl, $rootScope, ConfigFactory, UserFactory, gettextCatalog,
-                  AuthFactory) {
+            AuthFactory) {
 
             $scope.usersPerPage = $scope.user_page_size;
             $scope.params = {
@@ -414,7 +414,7 @@ angular.module("privacyideaApp")
                 if ((!$rootScope.search_on_enter) || ($rootScope.search_on_enter && !live_search)) {
                     // We shall only search, if either we do not search on enter or
                     // if we search_on_enter and the enter key is pressed.
-                    const params = {realm: $scope.selectedRealm};
+                    const params = { realm: $scope.selectedRealm };
                     if ($scope.params.usernameFilter) {
                         params.username = "*" + $scope.params.usernameFilter + "*";
                     }
